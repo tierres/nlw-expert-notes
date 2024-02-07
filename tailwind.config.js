@@ -26,3 +26,5 @@ export default {
 // Para o projeto 'Notes' vamos extender a 'fontFamily'
 // Criamos uma propriedade 'sans' pois queremos substituir o padrão de fonte san serifa do tailwind
 // Colocamos um array que faz com que ele pegue a fonte 'Inter' e se a Inter não estiver disponível ele pega uma 'sans-serif' qualquer do sistema
+
+// 555523
