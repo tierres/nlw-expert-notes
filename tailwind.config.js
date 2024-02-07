@@ -27,4 +27,4 @@ export default {
 // Criamos uma propriedade 'sans' pois queremos substituir o padrão de fonte san serifa do tailwind
 // Colocamos um array que faz com que ele pegue a fonte 'Inter' e se a Inter não estiver disponível ele pega uma 'sans-serif' qualquer do sistema
 
-// 23:00 06/02/2024 -Tierres G.
+// 23:38 06/02/2024 -Tierres G.
