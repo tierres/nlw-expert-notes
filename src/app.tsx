@@ -12,6 +12,12 @@ export function App() {
           className='w-full bg-transparent text-3xl font-semibold tracking-tight outline-none placeholder:text-slate-500'
         />
       </form>
+
+      <div className='h-px bg-slate-700' />
+
+      <div className='grid grid-cols-3 auto-rows'>
+
+      </div>
     </div>
     
   )
@@ -88,4 +94,19 @@ export function App() {
 //    Gera um espaçamento de 6x4 = 24px entre todos os elementos do eixo Y
 //    Ou seja, como o logo, o input, a futura linha e as futuras notas estão todos dentro da div, todos seguem essa regra
 
-// PC 8:39
+
+
+// Dentro da className da 'div' de baixo do form
+
+//    'h-px bg-slate-700':
+//  O 'h' representa 'height', e o 'px' representa 1px, então fizemos uma div box com altura de 1 pixel com backgrond color de slate-700, que é um cinza
+
+
+
+
+//           GRID de Notas
+
+// Para criar os blocos de notas criei mais uma div dentro da div principal, logo abaixo da div da linha
+
+// notebook 11:56 
+
