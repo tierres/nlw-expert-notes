@@ -43,13 +43,14 @@ export function App() {
           </p>
         </div>  
 
-        <div className='rounded-md bg-slate-800 p-5 space-y-3'>
+        <div className='rounded-md bg-slate-800 p-5 space-y-3 overflow-hidden relative'>
           <span className='text-sm font-medium text-slate-300'>
             há 7 dias
           </span>
           <p className='text-sm leading-6 text-slate-400'>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis sapiente voluptatibus ex esse nihil molestias eius tenetur blanditiis possimus quam ut facere. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium nisi odit voluptatem ullam eligendi? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque explicabo, vel natus architecto velit odit aut enim vero qui pariatur provident, unde dolorem nisi deserunt nam at molestiae aspernatur similique!
           </p>
+          <div className='absolute bottom-0 left-0 right-0 h-1/2' />
         </div>              
       </div>
     </div>
@@ -244,5 +245,23 @@ export function App() {
 // Coloquei um texto grande dentro da última div e o texto saiu pra ford do card
 // Para resolver isso....
 
-// PC 08/02/2024 - 17:53 - aula 1 segue no minuto 48:48
+//  'overflow-hidden':
+//    Faz com que o excesso de conteúdo não saia do card
 
+
+
+// Para fazer aquele sombreamento/gradiente que tem nos cards no figma:
+
+// Adicionei 'relative' ao card, que deixa 'position: relative'
+// Criei uma div sem conteúdo em baixo do 'p' e adicionei ao seu className:
+//  'absolute':
+//      Deixa 'position: absolute'
+//  'bottom-0 left-0 right-0 h-1/2':
+//      Essas classes fazem o seguinte: -bottom: 0px;
+//                                      -left: 0px;
+//                                      -right: 0px;
+//                                      -height: 50%;
+
+//      *Nas classes do Tailwind porcentagem é representado por fração
+
+// PC - 09/02/2024 - 00h06 - video parou em 51:20
