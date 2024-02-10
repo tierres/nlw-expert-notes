@@ -1,4 +1,5 @@
 import logo from './assets/logo-nlw-expert.svg'
+import { NoteCard } from './components/note-card'
 
 export function App() {
   return (
@@ -16,7 +17,7 @@ export function App() {
       <div className='h-px bg-slate-700' />
 
       <div className='grid grid-cols-3 gap-6 auto-rows-[250px]'>
-        <div className='rounded-md bg-slate-700 p-5 space-y-3'>
+        <div className='rounded-md bg-slate-700 p-5 space-y-3 overflow-hidden relative'>
           <span className='text-sm font-medium text-slate-200'>
             Adicionar nota
           </span>
@@ -24,34 +25,9 @@ export function App() {
             Grave uma nota em áudio que será convertida para texto automaticamente.
           </p>
         </div>
-
-        <div className='rounded-md bg-slate-800 p-5 space-y-3'>
-          <span className='text-sm font-medium text-slate-300'>
-            há 2 dias
-          </span>
-          <p className='text-sm leading-6 text-slate-400'>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste, iure dicta. Minima vel quo est impedit libero perspiciatis commodi omnis maiores quod accusantium. Nesciunt facilis fugit, sit reiciendis error nemo.
-          </p>
-        </div>
-
-        <div className='rounded-md bg-slate-800 p-5 space-y-3'>
-          <span className='text-sm font-medium text-slate-300'>
-            há 4 dias
-          </span>
-          <p className='text-sm leading-6 text-slate-400'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis sapiente voluptatibus ex esse nihil molestias eius tenetur blanditiis possimus quam ut facere, soluta, minima voluptatem recusandae natus adipisci? Veritatis, odit?
-          </p>
-        </div>  
-
-        <div className='rounded-md bg-slate-800 p-5 space-y-3 overflow-hidden relative'>
-          <span className='text-sm font-medium text-slate-300'>
-            há 7 dias
-          </span>
-          <p className='text-sm leading-6 text-slate-400'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis sapiente voluptatibus ex esse nihil molestias eius tenetur blanditiis possimus quam ut facere. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium nisi odit voluptatem ullam eligendi? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque explicabo, vel natus architecto velit odit aut enim vero qui pariatur provident, unde dolorem nisi deserunt nam at molestiae aspernatur similique!
-          </p>
-          <div className='absolute bottom-0 left-0 right-0 h-1/2' />
-        </div>              
+        <NoteCard></NoteCard>   
+        <NoteCard></NoteCard> 
+        <NoteCard></NoteCard>    
       </div>
     </div>
     
@@ -242,8 +218,8 @@ export function App() {
 
 
 
-// Coloquei um texto grande dentro da última div e o texto saiu pra ford do card
-// Para resolver isso....
+// Coloquei um texto grande dentro da última div e o texto saiu pra fora do card
+// Para resolver isso adicionei em todas as div card....
 
 //  'overflow-hidden':
 //    Faz com que o excesso de conteúdo não saia do card
@@ -252,8 +228,9 @@ export function App() {
 
 // Para fazer aquele sombreamento/gradiente que tem nos cards no figma:
 
-// Adicionei 'relative' ao card, que deixa 'position: relative'
-// Criei uma div sem conteúdo em baixo do 'p' e adicionei ao seu className:
+// Adicionei 'relative' em todas as div card, que deixa 'position: relative'
+
+// Em todas as div card criei uma div sem conteúdo em baixo do 'p' e adicionei ao seu className:
 //  'absolute':
 //      Deixa 'position: absolute'
 //  'bottom-0 left-0 right-0 h-1/2':
@@ -264,4 +241,32 @@ export function App() {
 
 //      *Nas classes do Tailwind porcentagem é representado por fração
 
-// PC - 09/02/2024 - 00h06 - video parou em 51:20
+//  'bg-gradient-to-t':
+//      Altera a 'background-color' para um gradiente que vai para 'to-t', to top, para o topo
+
+//  'from-black/60 to-black/0':
+//      Aqui estamos escolhendo de qual cor começa o gradient até qual cor vai
+//      *No Tailwind podemos escolher a opacidade da cor colocando / e o número
+
+
+
+//  Ao tentar selecionar o texto das notas atualmente verás que só é possível selecionar letra por letra até a metade do card, depois ele seleciona tudo
+//  Isso acontece porque a div do gradient está sobrepondo o texto
+
+//  Para resolver isso adicionei 'pointer-events-none' em todas as div gradient que adiciona a seguinte propriedade ao CSS -> 'pointer-events: none;'
+
+
+// Agora utilizaremos do poder do React para não precisar manter esse monte de código em tela
+// Criei uma pasta 'components' dentro da pasta 'src'
+// Criei um arquivo 'note-card.tsx'
+// Dentro de 'note-card.tsx' criei um:
+//      export function NoteCard() {
+//        return ()
+//      }
+
+// Dei CTRL + X em um dos cards com gradient daqui do 'app.tsx' e colei dentro do return() do 'note-card.tsx'
+// Apaguei o resto dos cards com gradient
+
+// Agora posso utilizar " <NoteCard></NoteCard> " para mostras as notas em tela, sem aquela poluição que estava antes
+
+// PC - 09/02/2024 - 21:56
