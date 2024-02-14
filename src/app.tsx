@@ -261,6 +261,4 @@ export function App() {
 // Dei CTRL + X em um dos cards com gradient daqui do 'app.tsx' e colei dentro do return() do 'note-card.tsx'
 // Apaguei o resto dos cards com gradient
 
-// Agora posso utilizar " <NoteCard></NoteCard> " para mostras as notas em tela, sem aquela poluição que estava antes
-
-// PC - 09/02/2024 - 21:56
+// Agora posso utilizar " <NoteCard></NoteCard> " para mostras as notas em tela, sem aquela poluição que estava antes.

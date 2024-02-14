@@ -34,4 +34,4 @@ export function NoteCard() {
 //  Perceba que por padrão o focus do meu notebook é branco, para alterar isso fiz o seguinte:
 //
 
-// Notebook - 10/02/2024 - 18h00 - 01:00:00 de vídeo
+// PC - 14/02/2024 - 20h20 - 01:00:00 de vídeo
