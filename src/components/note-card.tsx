@@ -1,6 +1,6 @@
 export function NoteCard() {
     return (
-        <button className='rounded-md text-left bg-slate-800 p-5 space-y-3 overflow-hidden relative hover:ring-2 hover:ring-slate-600 focus-visible'>
+        <button className='rounded-md text-left bg-slate-800 p-5 space-y-3 overflow-hidden relative outline-none hover:ring-2 hover:ring-slate-600 focus-visible:ring-2 focus-visible:ring-lime-400'>
           <span className='text-sm font-medium text-slate-300'>
             há 2 dias
           </span>
@@ -32,6 +32,12 @@ export function NoteCard() {
 
 
 //  Perceba que por padrão o focus do meu notebook é branco, para alterar isso fiz o seguinte:
-//
+//  Utilizei 
+//  'focus-visible:ring-2 focus-visible:ring-lime-400'
+//  'outline-none'
 
-// PC - 14/02/2024 - 20h20 - 01:00:00 de vídeo
+//    Utilizando 'focus' ao clicar em uma nota fica verde, pois ele aplica aquele CSS quando clicamos no elemento
+//    Já no 'focus-visible' ele aplica aquele CSS somente se estivermos navegando pelo teclado
+
+
+// Aula finalizada.

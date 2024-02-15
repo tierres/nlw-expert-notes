@@ -21,7 +21,10 @@ export function App() {
         <NewNoteCard />
         <NoteCard />   
         <NoteCard />  
-        <NoteCard />     
+        <NoteCard />  
+        <NoteCard />
+        <NoteCard />
+        <NoteCard />   
       </div>
     </div>
     
