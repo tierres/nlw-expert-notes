@@ -40,4 +40,4 @@ export function NoteCard() {
 //    Já no 'focus-visible' ele aplica aquele CSS somente se estivermos navegando pelo teclado
 
 
-// Aula finalizada.
+// Aula finalizada. PC - 15/02/2024 - 17h10 - último commit da aula 1
