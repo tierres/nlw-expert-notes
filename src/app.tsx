@@ -5,8 +5,18 @@ import { NoteCard } from './components/note-card'
 
 export function App() {
   const [notes, setNotes] = useState([
-    {  }
+    { id: 1, date: new Date(), content: 'Hello World' }
   ])
+
+  function onNoteCreated(content: string) {
+    const newNote = {
+      id: Math.random(),
+      date: new Date(),
+      content,
+    }
+
+    setNotes([newNote, ...notes])
+  }
 
   return (
     <div className='mx-auto max-w-6xl my-12 space-y-6'>
@@ -23,19 +33,11 @@ export function App() {
       <div className='h-px bg-slate-700' />
 
       <div className='grid grid-cols-3 gap-6 auto-rows-[250px]'>
-        <NewNoteCard />
-        <NoteCard note={{
-          date: new Date(),
-          content: 'Hello T'
-        }} />   
-        <NoteCard note={{
-          date: new Date(),
-          content: 'FIAT'
-        }} />  
-        <NoteCard note={{
-          date: new Date(),
-          content: 'I will be a...'
-        }} />  
+        <NewNoteCard onNoteCreated={onNoteCreated} />
+
+        {notes.map(note => {
+          return <NoteCard key={note.id} note={note}/>
+        })} 
       </div>
     </div>
     
