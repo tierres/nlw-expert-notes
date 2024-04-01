@@ -39,7 +39,7 @@ export function App() {
   }
 
   const filteredNotes = search != ''
-    ? notes.filter(note => note.content.includes(search))
+    ? notes.filter(note => note.content.toLocaleLowerCase().includes(search.toLocaleLowerCase()))
     : notes
 
   return (
@@ -60,7 +60,7 @@ export function App() {
       <div className='grid grid-cols-3 gap-6 auto-rows-[250px]'>
         <NewNoteCard onNoteCreated={onNoteCreated} />
 
-        {notes.map(note => {
+        {filteredNotes.map(note => {
           return <NoteCard key={note.id} note={note}/>
         })} 
       </div>
